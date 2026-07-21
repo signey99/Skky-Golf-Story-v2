@@ -386,10 +386,10 @@ export default function App() {
               <img src={logoSrc} onError={handleLogoError} alt="Skky Golf Logo" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
             </div>
             <div className="flex flex-col justify-center">
-              <h1 className="text-xl md:text-2xl font-normal tracking-wider text-blue-500 font-marker leading-none text-shadow-sm" id="header-title">
+              <h1 className="text-xl md:text-2xl font-normal tracking-wider text-blue-400 font-marker leading-none text-shadow-sm" id="header-title">
                 SKKY GOLF STORY
               </h1>
-              <p className="text-base md:text-lg text-pink-500 font-bold tracking-wide mt-1.5 font-brush leading-none text-shadow-sm" id="header-subtitle">
+              <p className="text-base md:text-lg text-pink-400 font-bold tracking-wide mt-1.5 font-brush leading-none text-shadow-sm" id="header-subtitle">
                 시근이와 계영이의 골프이야기
               </p>
             </div>
