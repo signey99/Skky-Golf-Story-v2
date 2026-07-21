@@ -1,0 +1,71 @@
+{
+  "entities": {
+    "Course": {
+      "title": "Course",
+      "description": "A golf course with 18 holes of pars and ratings",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "address": { "type": "string" },
+        "phone": { "type": "string" },
+        "totalPar": { "type": "integer" },
+        "blueRating": { "type": "string" },
+        "blueSlope": { "type": "string" },
+        "redRating": { "type": "string" },
+        "redSlope": { "type": "string" },
+        "pars": {
+          "type": "array",
+          "items": { "type": "integer" }
+        }
+      },
+      "required": ["id", "name", "totalPar", "pars"]
+    },
+    "Game": {
+      "title": "Game",
+      "description": "A golf game/round between two players",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "date": { "type": "string" },
+        "courseId": { "type": "string" },
+        "courseName": { "type": "string" },
+        "players": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": { "type": "string" },
+              "name": { "type": "string" }
+            },
+            "required": ["id", "name"]
+          }
+        },
+        "scores": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": { "type": "integer" }
+          }
+        },
+        "status": { "type": "string", "enum": ["active", "completed"] },
+        "currentHole": { "type": "integer" },
+        "photos": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["id", "date", "courseId", "courseName", "players", "scores", "status", "currentHole"]
+    }
+  },
+  "firestore": {
+    "/courses/{courseId}": {
+      "schema": "Course",
+      "description": "Collection of golf courses"
+    },
+    "/games/{gameId}": {
+      "schema": "Game",
+      "description": "Collection of played games/rounds"
+    }
+  }
+}

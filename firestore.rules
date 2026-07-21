@@ -1,0 +1,15 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Enable simple public read/write access for courses and games
+    match /courses/{courseId} {
+      allow read, write: if true;
+    }
+    match /games/{gameId} {
+      allow read, write: if true;
+    }
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

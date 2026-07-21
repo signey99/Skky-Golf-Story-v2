@@ -1,0 +1,6 @@
+{
+  "name": "SkKy Golf Story",
+  "description": "2인용 골프 스코어 및 경기 기록 관리 애플리케이션 (SkKy Golf Story)",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
