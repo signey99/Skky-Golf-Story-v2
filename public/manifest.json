@@ -1,0 +1,26 @@
+{
+  "short_name": "SkKy Golf",
+  "name": "SkKy Golf Story",
+  "description": "시근이와 계영이의 골프이야기 (SkKy Golf Story)",
+  "icons": [
+    {
+      "src": "/icon-192.png?v=12",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png?v=12",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "scope": "/",
+  "id": "/",
+  "background_color": "#0f172a",
+  "theme_color": "#006e4a",
+  "display": "standalone",
+  "orientation": "portrait"
+}
